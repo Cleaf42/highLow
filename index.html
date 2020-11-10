@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>High-Low</title>
+	<link href="public/stylesheets/styles.css" rel="stylesheet" type="text/css">
+	<link href="public/stylesheets/button.min.css" rel="stylesheet" type="text/css">
+	<link href="public/stylesheets/button.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<main class="container">
+		<section class="text">
+			<div id="title">
+				High-Low
+			</div>
+			<div id="desc">
+				Guess High Low or Seven
+			</div>
+			<div id="reset-btn" data-bind="if: showResetBtn">
+				<button data-bind="click: function() {reset()};" class="ui red small basic button" id="reset">Reset</button>
+			</div>
+			<div id="score">
+				Score: <span data-bind="text: score"id="score_span">0</span>
+			</div>
+			<div id="roll_result">
+				Roll Result: <span data-bind="text: roll" id="roll_result_span">...</span>
+			</div>
+		</section>
+		<section class="buttons">
+			<div class="guess-div">
+				<button data-bind="click: function() {gameLogic('high')};" class="ui green large basic button" id="high">High</button>
+			</div>
+			<div class="guess-div">
+				<button data-bind="click: function() {gameLogic('seven')};" class="ui green large basic button" id="seven">Seven</button>
+			</div>
+			<div class="guess-div">
+				<button data-bind="click: function() {gameLogic('low')};" class="ui green large basic button" id="low">Low</button>
+			</div>
+		</section>
+	</main>
+	<script src="public/js/lib/knockout-3.4.2.js"></script>	
+	<script src="public/js/index.js">
+	</script>
+</body>
+</html>
